@@ -47,26 +47,28 @@ const Navbar = () => {
                         <li key={link.name} className="relative group">
                             {link.name === 'services' ? (
                                 <>
-                                    <div className="flex items-center gap-1 capitalize hover:text-gray-300 cursor-pointer">
+                                    <div className="flex items-center gap-1 capitalize hover:text-primary cursor-pointer">
                                         Services <IoIosArrowDown />
                                     </div>
-                                    <ul className="z-20 absolute left-0 mt-2 hidden w-50 rounded-md bg-white py-2 text-black shadow-lg group-hover:block">
-                                        {serviceLinks.map((sublink) => (
-                                            <li key={sublink.name}>
+
+                                    <div className="pointer-events-none absolute left-[-120] top-full z-50 hidden w-screen -translate-x-1/2 group-hover:block">
+                                        <div className="text-left pointer-events-auto mt-0 mx-auto max-w-full bg-gradient-to-r from-[#161616] via-[#2F1414] to-[#161616] py-10 px-6 md:px-20 grid grid-cols-3 gap-3 text-white">
+                                            {serviceLinks.map((sublink) => (
                                                 <Link
+                                                    key={sublink.name}
                                                     href={sublink.href}
-                                                    className="block px-4 py-2 hover:bg-gray-200 capitalize"
+                                                    className="block py-2 text-md capitalize hover:text-primary"
                                                 >
                                                     {sublink.name}
                                                 </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </>
                             ) : (
                                 <Link
                                     href={link.href}
-                                    className="capitalize hover:text-gray-300"
+                                        className="capitalize hover:text-primary"
                                 >
                                     {link.name}
                                 </Link>
@@ -77,7 +79,7 @@ const Navbar = () => {
                     <li>
                         <Link
                             href="/signup"
-                            className="rounded-full border-2 border-white px-6 py-2 transition hover:bg-white hover:text-black"
+                            className="rounded-full border-2 border-white hover:border-primary px-6 py-2 transition hover:text-primary"
                         >
                             Sign Up
                         </Link>
@@ -132,7 +134,7 @@ const Navbar = () => {
                         <li>
                             <Link
                                 href="/signup"
-                                className="block rounded-full border-2 border-white px-6 py-2 text-center transition hover:bg-white hover:text-black"
+                                className="block rounded-full border-2 border-white hover:border-primary px-6 py-2 text-center transition hover:text-primary"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Sign Up

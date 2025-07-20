@@ -4,6 +4,7 @@
 
 PolySans -> Lato
 Poppins -> Montserrat
-
 Afacad -> Afacad
 Manrope -> Manrope
+
+- Sign forms - Design of image

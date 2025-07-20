@@ -96,7 +96,7 @@ export default function Page() {
                         {!isForgotPassword && (
                             <>
                                 <p className="font-montserrat400 text-center text-sm">
-                                    <Link href="/signin" className="text-gray-600 hover:text-gray-800">
+                                    <Link href="/signin" className="text-black hover:text-primary">
                                         Or sign up with
                                     </Link>
                                 </p>
